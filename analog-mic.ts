@@ -1,4 +1,4 @@
-//% weight=100 color=#AA278F icon=""
+//% weight=100 color=#AA278F icon=""
 //% block="Analog Mic"
 namespace analogMic {
     /**
