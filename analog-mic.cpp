@@ -12,12 +12,12 @@ namespace analogMic {
 bool initialized = false;
 volatile bool altMicActive = true;  // filterOn flag; set false to pause during deep sleep
 
-//%
 // gain: NRF52ADC hardware gain step, 0-7 (7 = built-in default; external modules
 //       with onboard amp may clip -- start at 0 and increase during bring-up)
 // normFactor: StreamNormalizer normalisation factor, integer 0-1000 representing
 //             0.000-1.000 (divided by 1000.0f before passing to CODAL).
 //             Default 80 -> 0.08f, matches built-in mic.
+//%
 void useAnalogMicOnPin(int pinId, int gain, int normFactor) {
     if (initialized) return;  // Silent no-op if called twice -- by design
     initialized = true;
