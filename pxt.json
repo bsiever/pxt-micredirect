@@ -1,7 +1,7 @@
 {
     "name": "microbit-mic",
-    "description": "Use an analog microphone on an edge connector pin as the audio input source for micro:bit v2",
     "version": "0.0.1",
+    "description": "Use an analog microphone on an edge connector pin as the audio input source for micro:bit v2",
     "dependencies": {
         "core": "*"
     },
@@ -10,8 +10,12 @@
         "analog-mic.ts",
         "README.md"
     ],
-    "supportedTargets": ["microbit"],
-    "testFiles": ["test.ts"],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
     "card": {
         "name": "microbit-mic",
         "description": "Use an analog microphone on an edge connector pin",

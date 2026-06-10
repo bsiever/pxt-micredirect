@@ -28,14 +28,14 @@ void useAnalogMicOnPin(int pinId, int gain, int normFactor) {
     // On CODAL builds MicroBitPin IS NRF52Pin via typedef -- cast is safe.
     NRF52Pin *targetPin = (NRF52Pin*) pxt::getPin((int)pinId);
     if (!targetPin) {
-        target_panic(PANIC_HARDWARE_CONFIGURATION_ERROR);
+        target_panic(DEVICE_HARDWARE_CONFIGURATION_ERROR);
         return;
     }
 
     // Acquire an ADC channel for the analog pin.
     NRF52ADCChannel *altMic = uBit.adc.getChannel(*targetPin, false);
     if (!altMic) {
-        target_panic(PANIC_HARDWARE_CONFIGURATION_ERROR);  // pin is not ADC-capable
+        target_panic(DEVICE_HARDWARE_CONFIGURATION_ERROR);  // pin is not ADC-capable
         return;
     }
 
