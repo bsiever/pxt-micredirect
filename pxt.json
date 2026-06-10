@@ -2,6 +2,7 @@
     "name": "microbit-mic",
     "version": "0.0.1",
     "description": "Use an analog microphone on an edge connector pin as the audio input source for micro:bit v2",
+    "license": "MIT",
     "dependencies": {
         "core": "*"
     },
@@ -17,6 +18,10 @@
         "target": "8.0.22",
         "targetId": "microbit"
     },
+    "public": true,
+    "authors": [
+        "Bill Siever <bsiever@gmail.com>"
+    ],
     "supportedTargets": [
         "microbit"
     ],
@@ -24,6 +29,10 @@
     "card": {
         "name": "microbit-mic",
         "description": "Use an analog microphone on an edge connector pin",
-        "imageUrl": "icon.svg"
-    }
+        "imageUrl": "icon.png",
+        "feedbackUrl": "http://siever.info"
+    },
+    "disablesVariants": [
+        "mbdal"
+    ]
 }
