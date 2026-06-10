@@ -14,18 +14,18 @@
     "testFiles": [
         "test.ts"
     ],
+    "public": true,
     "targetVersions": {
         "target": "8.0.22",
         "targetId": "microbit"
     },
-    "public": true,
-    "authors": [
-        "Bill Siever <bsiever@gmail.com>"
-    ],
     "supportedTargets": [
         "microbit"
     ],
     "preferredEditor": "tsprj",
+    "authors": [
+        "Bill Siever <bsiever@gmail.com>"
+    ],
     "card": {
         "name": "microbit-mic",
         "description": "Use an analog microphone on an edge connector pin",
