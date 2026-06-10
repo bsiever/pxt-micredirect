@@ -13,9 +13,14 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "8.0.22",
+        "targetId": "microbit"
+    },
     "supportedTargets": [
         "microbit"
     ],
+    "preferredEditor": "tsprj",
     "card": {
         "name": "microbit-mic",
         "description": "Use an analog microphone on an edge connector pin",
