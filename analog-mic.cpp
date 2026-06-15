@@ -18,7 +18,7 @@ volatile bool altMicActive = true;  // filterOn flag; set false to pause during 
 /             0.000-1.000 (divided by 1000.0f before passing to CODAL).
 /             Default 80 -> 0.08f, matches built-in mic.
 */
-//%
+//% 
 void useAnalogMicOnPin(int pinId, int gain, int normFactor) {
     if (initialized) return;  // Silent no-op if called twice -- by design
     initialized = true;
@@ -43,6 +43,10 @@ void useAnalogMicOnPin(int pinId, int gain, int normFactor) {
     // gain 0-7; 0 = no additional gain (recommended for modules with onboard amp like MAX4466).
     // 7 matches built-in mic defaults -- may clip with amplified modules.
     altMic->setGain(gain, 0);  // second arg = reference voltage selection, 0 = default
+
+    uBit.adc.activateChannel(altMic); 
+    uBit.adc.getChannel(*targetPin, false)->setStartDelay(1);
+
 
     // Build a parallel pipeline.
     // Order follows MicroBitAudio constructor: create splitter -> attach stages -> enable.
