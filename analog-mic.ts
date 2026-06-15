@@ -23,6 +23,7 @@ namespace analogMic {
     //% normFactor.min=0 normFactor.max=1000 normFactor.defl=80
     //% expandableArgumentMode="toggle"
     //% group="Setup"
+    //% shim=analogMic::useAnalogMicOnPin
     export function useAnalogMicOnPin(
         pin: AnalogPin,
         gain: number = 7,
@@ -40,6 +41,7 @@ namespace analogMic {
     //% blockId=analog_mic_set_enabled
     //% block="set analog microphone enabled %enabled"
     //% group="Setup"
+    //% shim=analogMic::setAnalogMicEnabled
     export function setAnalogMicEnabled(enabled: boolean): void {
         return;
     }
