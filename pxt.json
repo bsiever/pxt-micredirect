@@ -1,5 +1,5 @@
 {
-    "name": "microbit-mic - Copy",
+    "name": "microbit-mic",
     "version": "0.1.2",
     "description": "Use an analog microphone on an edge connector pin as the audio input source for micro:bit v2",
     "license": "MIT",
